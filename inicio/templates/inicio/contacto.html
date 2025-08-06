@@ -1,0 +1,70 @@
+{% extends "inicio/encabezado.html" %}
+{% block imagen%}
+{% load static%}
+{% static 'inicio/images/phone.png'%}
+{% endblock%}
+{% block desc%}contactenos <span>escriba su duda o pregunta</span>{% endblock%}
+
+ {% block contenido %}
+ 
+		<!-- Contenido Principal-->
+	
+
+
+			<!--Encabezdo -->
+            
+			<div class="page-header">
+				<div class="page-title">
+					<h3>Contactanos
+				    <small>escribe tu mensage</small></h3><title>{% block tilulo %}contacto{% endblock %}</title>
+				</div>
+
+				
+				
+			</div>
+			{% block path%}
+<div class="breadcrumb-line">
+   <ul class="breadcrumb">
+        <a href="{% url 'contacto' %}">
+			{%if request.path == '/' %}
+			        contacto
+			{%else%}
+			        contacto{{request.path}}
+            {%endif%}
+		</a>
+	</ul>
+	</div>
+{% endblock%}
+			<!-- /Encabezado-->
+            
+			<!-- Formulario -->
+			<form class="form-horizontal" action="#" role="form">
+	            <div class="panel panel-default">
+	                <div class="panel-body">
+
+				       
+				        
+				        <div class="form-group">
+				            <label class="col-sm-2 control-label text-right">Nombre:</label>
+				            <div class="col-sm-10">
+				            	<input type="text" class="form-control">
+				            </div>
+				        </div>
+				         <div class="form-group">
+				            <label class="col-sm-2 control-label text-right">Mensaje:</label>
+				            <div class="col-sm-10">
+				            	<textarea cols="50" rows="10" class="form-control"></textarea>
+				            </div>
+				        </div>
+                        <div class="form-actions text-right">
+                        	<input type="submit" value="Enviar" class="btn btn-primary">
+                        </div>
+
+				    </div>
+				</div>
+			</form>
+		<!-- Fin del Formulario -->
+		
+		<!-- /Contenido Principal-->
+
+ {% endblock %}
