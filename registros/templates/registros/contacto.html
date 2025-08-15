@@ -6,21 +6,12 @@
 {% block desc%}contactenos <span>escriba su duda o pregunta</span>{% endblock%}
 
  {% block contenido %}
- 
-		<!-- Contenido Principal-->
-	
-
-
-			<!--Encabezdo -->
             
 			<div class="page-header">
 				<div class="page-title">
 					<h3>Contactanos
 				    <small>escribe tu mensage</small></h3><title>{% block tilulo %}contacto{% endblock %}</title>
-				</div>
-
-				
-				
+				</div>	
 			</div>
 			{% block path%}
 <div class="breadcrumb-line">
@@ -35,9 +26,6 @@
 	</ul>
 	</div>
 {% endblock%}
-			<!-- /Encabezado-->
-            
-			<!-- Formulario -->
 			<form class="form-horizontal" action="{% url 'Registrar'%}" method="POST" role="form">
 	            {%csrf_token%}
 				<div class="panel panel-default">
@@ -64,8 +52,4 @@
 				    </div>
 				</div>
 			</form>
-		<!-- Fin del Formulario -->
-		
-		<!-- /Contenido Principal-->
-
  {% endblock %}

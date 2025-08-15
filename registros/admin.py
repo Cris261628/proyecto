@@ -17,7 +17,6 @@ class AdministrarModelo(admin.ModelAdmin):
             return('created','updated','matricula','carrera','turno')
         else:
             return ('created','updated')
-# Register your models here.
 admin.site.register(Alumnos,AdministrarModelo)
 
 

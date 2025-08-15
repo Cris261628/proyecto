@@ -34,18 +34,7 @@ urlpatterns = [
     path('comentarios/',views_registros.comentarios,name="comentarios"),
     path('eliminarComentario/<int:id>/',views_registros.eliminarComentarioContacto,name='Eliminar'),
     path('consultas1',views_registros.consultar,name="consultas"),
-    path('consultas2',views_registros.consultarr,name="consultas"),
-    path('consultas3',views_registros.consultarrr,name="consultas"),
-    path('consultas4',views_registros.consultare,name="consultas"),
-    path('consultas5',views_registros.consultaree,name="consultas"),
-    path('consultas6',views_registros.consultar6,name="consultas"),
-    path('consultas7',views_registros.consultar7,name="consultas"),
-    #//////////
-    path('comentarios_fecha', views_registros.comentarios_fecha, name='comentarios_fecha'),
-    path('buscar_expresion', views_registros.buscar_expresion, name='buscar_expresion'),
-    path('comentarios_usuario', views_registros.comentarios_usuario, name='comentarios_usuario'),
-    path('comentarios_sin_error', views_registros.comentarios_sin_error, name='comentarios_sin_error'),
-    path('subir',views_registros.archivos,name="Subir"),
+
     path('consultasSQL',views_registros.consultasSQL,name="sql"),
     path('seguridad',views_registros.seguridad,name="Seguridad"),
 ]   
